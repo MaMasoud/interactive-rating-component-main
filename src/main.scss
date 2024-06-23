@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+$Orange: hsl(25, 97%, 53%);
+$White: hsl(0, 0%, 100%);
+$LightGrey: hsl(217, 12%, 63%);
+$DarkBlue: hsl(213, 19%, 18%);
+$VeryDarkBlue: hsl(216, 12%, 8%);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+}
+.section {
+    background-color: $VeryDarkBlue;
+    color: $White;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box {
+    background-color: $DarkBlue;
+    border-radius: 30px;
+    padding: 30px;
+    max-width: 410px;
+    width: 100%;
+    min-height: 415px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 24px;
+    .star {
+        background-color:  rgba($LightGrey, 0.1);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+    .rating-list {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+    .rate {
+        @extend .star;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.1s ease-in-out;
+        color: $White;
+        font-weight: 700;
+        &:hover {
+            background-color: $Orange;
+            color:$DarkBlue;
+        }
+        &.active {
+            background-color: $White;
+            color: $DarkBlue;
+        }
+    }
+    .submit {
+        background-color: $Orange;
+        color: $DarkBlue;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 100%;
+        font-size: 18px;
+        transition: 0.1s ease-in-out;
+        &:hover {
+            background-color: $White;
+            color: $DarkBlue;
+        }
+    
+    }
+}
+.think-you {
+    align-items: center;
+    img {
+        width: 50%;
+    }
+    .messege {
+        background-color: rgba($LightGrey, 0.1);
+        padding: 10px 30px;
+        border-radius: 30px;
+        color: $Orange;
+        margin-top: 20px;
+    }
+    p {
+        text-align: center;
+    }
+}
